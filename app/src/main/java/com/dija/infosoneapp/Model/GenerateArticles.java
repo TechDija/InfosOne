@@ -1,0 +1,25 @@
+package com.dija.infosoneapp.Model;
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.GregorianCalendar;
+import java.util.List;
+
+public class GenerateArticles {
+    public static List<Article> ARTICLES = Arrays.asList(
+            new Article("Emeutes à Valparaiso", "Libération", "Chili. Selon un nouveau bilan gouvernemental mardi, quinze personnes ont été tuées dans les violences qui ont éclaté ces derniers jours au Chili. Le sous-secrétaire à l’Intérieur Rodrigo Ubilla a fait état de trois nouveaux décès. La région de Santiago compte 11 morts «survenus lors d’incendies et de pillages principalement de centres commerciaux» et hors de la capitale, trois des quatre victimes l’ont été par balle, a-t-il ajouté. Pour sa part, le président chilien conservateur Sebastian Piñera devait réunir les partis politiques pour tenter de trouver une issue à la violente crise sociale qui secoue le pays latino-américain depuis cinq jours.",
+                    "Javier TORRES", new GregorianCalendar(2019, 9, 10).getTime(), "news01"),
+            new Article("Haut-Karabakh : l’Arménie « prête » à reprendre le processus de paix avec l’Azerbaïdjan", "Le Monde", "Le premier ministre arménien, Nikol Pachinian, a déclaré vendredi 9 octobre être « prêt » à reprendre le processus de paix sous médiation internationale avec l’Azerbaïdjan en ce qui concerne la région séparatiste du Haut-Karabakh, en proie à des combats meurtriers. « Nous sommes prêts pour la reprise du processus de paix en lien avec les récentes déclarations des présidents et ministres des affaires étrangères du groupe de Minsk », a-t-il déclaré, faisant référence au nom donné au groupe de trois Etats « médiateurs » (la Russie, les Etats-Unis et la France) dans ce conflit.",
+                    "DMITRY ASTAKHOV", new GregorianCalendar(2020, 10, 10).getTime(), "news02" ),
+            new Article("Cyclisme: Le Paris-Roubaix annulé", "Le Monde", "La « reine des classiques » cyclistes est elle aussi victime du coronavirus : l’édition 2020 de Paris-Roubaix, qui devait avoir lieu le 25 octobre, a été annulée par ses organisateurs vendredi 9 octobre en raison de la situation sanitaire. La grande course des pavés a fait les frais des nouvelles restrictions prises pour freiner l’aggravation de l’épidémie de Covid-19 dans le nord de la France. L’annonce survient au lendemain du classement de Lille, à partir de samedi, en « zone d’alerte maximale » par le ministre de la santé, Olivier Véran. La décision a été prise « à la demande du préfet du Nord et de la région des Hauts-de-France », a expliqué Amaury Sport Organisation (ASO), la société organisatrice de la course.« Nous sommes déçus et tristes de devoir renoncer à la “reine des classiques”, a déclaré le directeur du Tour de France, Christian Prudhomme, également organisateur de Paris-Roubaix. Mais nous comprenons et acceptons évidemment la décision du préfet. La priorité va à la santé des personnes. »",
+                    "Christine POUJOULAT", new GregorianCalendar(2020, 10, 10).getTime(), "news03"),
+            new Article("Donald Trump évoque « un don du ciel » après son infection au Covid-19", "Le Monde", "Ignorant les mises en garde sur les risques de contagion, Donald Trump a mis en scène mercredi 7 octobre son retour dans le bureau Ovale, six jours après avoir été diagnostiqué positif au Covid-19. « Je pense que c’était en réalité un don du ciel que je l’aie attrapé », a lancé le président américain, presque euphorique, debout devant le bureau le plus célèbre du monde, dans une vidéo débridée publiée sur Twitter.Interrogé quelques minutes après sur ces propos, son adversaire démocrate Joe Biden s’est indigné : « Je pense que c’est une tragédie que le président parle du Covid-19 comme si c’était quelque chose dont il ne fallait pas s’inquiéter alors que plus de 210 000 Américains sont morts. »",
+                    "Saul LOEB",new GregorianCalendar(2020, 10, 9).getTime(), "news04"),
+            new Article("Greenpeace accuse des navires chinois de pêche illicite au large du Sénégal", "Le Monde Afrique", "Depuis un abri construit sur la plage de Kayar, ville de pêcheurs à 50 kilomètres de Dakar, Assane Sarry regarde les pirogues parties pêcher au loin. « Les poissons se raréfient de plus en plus. Pageots, espadons, yaboy… On ne les voit quasiment plus », commente l’homme qui part en mer depuis trente-deux ans.Président de la commission de gestion des ressources du conseil local de la pêche artisanale de Kayar, il partage un verre de thé avec d’autres pêcheurs aussi las que lui de cette diminution des ressources dans les eaux sénégalaises. « C’est [la faute de] la pêche industrielle ! », s’exclame Mor Mbengue, membre de la Plate-forme des acteurs de la pêche artisanale du Sénégal (Papas).",
+                    "Théa OLLIVIER", new GregorianCalendar(2020, 10, 8).getTime(), "news05")
+    );
+    public static List<Article> getArticles() {
+        return new ArrayList<>(ARTICLES);
+    }
+}

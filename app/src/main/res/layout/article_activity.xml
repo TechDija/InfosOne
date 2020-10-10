@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewModel.ArticleActivity">
+
+    <ImageView
+        android:id="@+id/return_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        android:padding="3dp"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/title_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginTop="40dp"
+        android:layout_margin="8dp"
+        android:layout_below="@id/return_image"
+        android:text="TITLE"/>
+
+    <TextView
+        android:id="@+id/author_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="author"
+        android:layout_margin="10dp"
+        android:layout_below="@id/title_display"/>
+
+    <TextView
+        android:id="@+id/date_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="date"
+        android:layout_margin="10dp"
+        android:layout_below="@id/author_display"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/date_display"/>
+
+    <TextView
+        android:id="@+id/content_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="10dp"
+        android:text="Content"
+        android:textSize="20dp" />
+
+</RelativeLayout>
