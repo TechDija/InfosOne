@@ -10,39 +10,41 @@ import android.widget.TextView;
 
 import com.dija.infosoneapp.Model.Article;
 import com.dija.infosoneapp.R;
-import com.dija.infosoneapp.View.ArticleViewHolder;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 public class ArticleActivity extends AppCompatActivity {
     private ImageView mReturn;
-    //private ImageView mImage;
-    private TextView mTitle;
-    private TextView mAuthor;
+    private TextView mTitre;
+    private TextView mAuteur;
     private TextView mDate;
-    private TextView mContent;
-
+    private TextView mContenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.article_activity);
+
         Intent intent = getIntent();
         Article article = intent.getParcelableExtra("article");
+
         DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm");
+        String titre = article.getTitle();
+        String auteur = article.getAuthor();
+        String contenu = article.getContent();
 
         mReturn = (ImageView) findViewById(R.id.return_image);
-        //mImage = (ImageView) findViewById(R.id.photo_display);
-          //  mImage.setImageDrawable(article.getPicture());
-        mTitle = (TextView) findViewById(R.id.title_display);
-            mTitle.setText(article.getTitle());
-        mAuthor = (TextView) findViewById(R.id.author_display);
-            mAuthor.setText(article.getAuthor());
+        mTitre = (TextView) findViewById(R.id.title_display);
+            mTitre.setText(titre);
+        mAuteur = (TextView) findViewById(R.id.author_display);
+            mAuteur.setText(auteur);
         mDate = (TextView) findViewById(R.id.date_display);
             mDate.setText(dateFormat.format(article.getDate()));
-        mContent = (TextView) findViewById(R.id.content_display);
-            mContent.setText(article.getContent());
+        mContenu = (TextView) findViewById(R.id.content_display);
+            mContenu.setText(contenu);
+
+
 
      mReturn.setOnClickListener(new View.OnClickListener() {
          @Override

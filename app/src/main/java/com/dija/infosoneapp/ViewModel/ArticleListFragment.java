@@ -1,6 +1,5 @@
 package com.dija.infosoneapp.ViewModel;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,6 +48,10 @@ public class ArticleListFragment extends Fragment {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
         return mRecyclerView;
+    }
+
+    private String getPackageName() {
+        return getPackageName();
     }
 
     private void initList() {

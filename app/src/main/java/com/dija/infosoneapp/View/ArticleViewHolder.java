@@ -1,5 +1,6 @@
 package com.dija.infosoneapp.View;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.dija.infosoneapp.Model.Article;
 import com.dija.infosoneapp.R;
+import com.dija.infosoneapp.ViewModel.ArticleListFragment;
+import com.dija.infosoneapp.ViewModel.MainActivity;
 
 import java.text.SimpleDateFormat;
 
@@ -27,20 +30,12 @@ public class ArticleViewHolder extends RecyclerView.ViewHolder {
         mAuthor = itemView.findViewById(R.id.author);
         mDate = itemView.findViewById(R.id.date);
     }
-
     public void updateWithArticle(Article article) {
-        // Todo à cherhcher
-        //Resources res = this.getResources();
-        //mPhoto.setImageDrawable(res.getDrawable(R.drawable.news01));
+
         mSource.setText(article.getSource());
         mTitle.setText(article.getTitle());
         mAuthor.setText(article.getAuthor());
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
         mDate.setText(sdf.format(article.getDate()));
-    }
-
-
-    private String getPackageName() {
-        return getPackageName();
     }
 }

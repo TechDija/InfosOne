@@ -4,7 +4,10 @@ import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.Nullable;
+
 import java.util.Date;
+import java.util.Objects;
 
 public class Article implements Parcelable {
     private String title;
@@ -28,7 +31,7 @@ public class Article implements Parcelable {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        Objects.requireNonNull(this.title = title);
     }
 
     public String getSource() {
@@ -69,6 +72,14 @@ public class Article implements Parcelable {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() !=obj.getClass()) return false;
+        Article article = (Article) obj;
+        return Objects.equals(title, article.title);
     }
 
     protected Article(Parcel in) {
