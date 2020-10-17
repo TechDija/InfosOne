@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -11,13 +19,32 @@
     android:layout_marginEnd="10dp"
     app:cardCornerRadius="10dp">
 
-    <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/photo_ImageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/news01"
-        android:src="@drawable/gradient_shape"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/news01"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <View android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/gradient_shape"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/source"
@@ -27,8 +54,8 @@
         android:textColor="@color/white"
         android:layout_gravity="start"
         android:layout_marginTop="60dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:ellipsize="end"
         android:singleLine="true" />
     <TextView
@@ -37,11 +64,11 @@
         android:layout_height="wrap_content"
         android:text="Title "
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_gravity="start"
         android:layout_marginTop="100dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:ellipsize="end"
         android:maxLines="2"/>
 
@@ -52,11 +79,11 @@
         android:text="author"
         android:textColor="@color/white"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="30dp"
-        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
         android:ellipsize="middle"
         android:singleLine="true"
-        android:layout_marginStart="12dp" />
+        android:layout_marginStart="20dp" />
 
     <TextView
         android:id="@+id/date"
@@ -65,9 +92,10 @@
         android:text="date"
         android:textColor="@color/white"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="30dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginEnd="12dp" />
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp" />
 
 
 </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ViewModel.ArticleActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_weight="1"
+        android:background="?attr/colorPrimaryDark"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="@string/app_name"
+        tools:ignore="MissingConstraints"/>
+
     <ImageView
         android:id="@+id/return_image"
         android:layout_width="30dp"
@@ -14,6 +25,7 @@
         android:adjustViewBounds="true"
         android:background="@drawable/ic_baseline_arrow_back_24"
         android:padding="3dp"
+        android:layout_below="@id/toolbar2"
         android:scaleType="centerInside" />
 
     <TextView
